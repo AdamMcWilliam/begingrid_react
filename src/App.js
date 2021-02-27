@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+const { REACT_APP_SCRAPPER_KEY, REACT_APP_IMGUR_KEY } = process.env;
+console.log(REACT_APP_SCRAPPER_KEY); // 8e8bd178bd91adb3.....
+console.log(REACT_APP_IMGUR_KEY); // Some value
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +23,7 @@ function App() {
         </a>
       </header>
     </div>
+    
   );
 }
 

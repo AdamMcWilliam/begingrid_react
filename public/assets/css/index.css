@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: #6441a5;
+    color: #f1f1f1;
+    font-size: 16px;
+    background-size: 1280px 720px;
+    margin: auto;
+    max-width: 1280px;
+}
+
+#header {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#jester {
+    left: 10px;
+    position: relative;
+}
+
+#jesterName {
+    display: inline-block;
+    overflow: auto;
+}
+
+#jester img {
+    width: 30px;
+}
+
+#chaosMode {
+    float: left;
+    background-color: #737373;
+    border-radius: 10px;
+    border-color: #262626;
+    border-width: 2px;
+    border-style: solid;
+    width: 120px;
+    padding: 2px;
+}
+
+#indicator {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    float: right;
+    text-align: center;
+    align-items: center;
+    border-color: #262626;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#githubSocials {
+    text-align: right;
+}
+
+#interface {
+    text-align: center;
+    width: 1280px;
+    height: 15px;
+    padding-top: 39px;
+}
+
+input[type="file"] {
+    font-size: 25px;
+}
+
+
+/* #twitch-embed {
+    border-radius: 4.7px;
+    border-color: #262626;
+    border-width: 8px;
+    border-style: solid; 
+} */
+
+#container,
+#loadOverlay {
+    width: 1280px;
+    height: 720px;
+}
+
+#coOrds {
+    z-index: 100;
+    color: blue;
+    font-size: 100px;
+}
+
+#container {
+    position: relative;
+}
+
+#container canvas,
+#closedSideNav,
+.sidenav,
+#twitch-embed,
+.beginWheel,
+#loadOverlay,
+#ImgSelector,
+#interface,
+#commands {
+    position: absolute;
+}
+
+#imgurLink {
+    display: none;
+}
+
+#imgCommand,
+#moveCommand,
+#scaleCommand,
+#rotateCommand,
+#pipedCommands,
+#pipeFind,
+#pipeMove,
+#pipeScale,
+#pipeRotate {
+    display: inline-block;
+}
+
+#twitch-chat-holder {
+    padding-top: 200px;
+    padding-bottom: 25px;
+}
+
+#twitch-chat {
+    border-radius: 6.4px;
+    border-color: #262626;
+    border-width: 8px;
+    border-style: solid;
+    width: 1280px;
+}
+
+#commands {
+    background-color: #b9a3e3;
+    width: 1280px;
+    height: 180px;
+    border-radius: 8.2px;
+    border-color: #737373;
+    border-width: 8px;
+    border-style: solid;
+}
+
+#commands h1 {
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 20px;
+}
+
+#commandsHolder {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#commandText {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+#imgSelector {
+    background-color: #737373;
+    width: 300px;
+    height: 720px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+#imgSelector button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* width */
+
+#imgSelector::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+#imgSelector::-webkit-scrollbar-track {
+    box-shadow: 0 0 1px 1px hsla(0, 0%, 100%, .25);
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+#imgSelector::-webkit-scrollbar-thumb {
+    background: #1f1f23;
+    border-radius: 10px;
+    border: 1px grey solid;
+}
+
+
+/* Handle on hover */
+
+#imgSelector::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+#closedSideNav {
+    height: 720px;
+    width: 10px;
+    z-index: 1;
+}
+
+#closedSideNav button {
+    font-family: 'RobotoBold';
+    color: #f1f1f1;
+    background: #b9a3e3;
+    -moz-appearance: none;
+    display: inline-block;
+    border-left: solid;
+    border-right: solid;
+    border-left: none;
+    border-bottom: solid;
+    border-bottom-color: #a47bf3;
+    border-right-color: #a47bf3;
+    border-top-color: #a47bf3;
+    border-radius: 5.4px;
+}
+
+#closedSideNav button:hover,
+button:focus {
+    outline: none;
+}
+
+.closebtn {
+    z-index: 10;
+}
+
+.sidenav {
+    height: 720px;
+    width: 0;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+#loadOverlay {
+    display: none;
+}
+
+#loadOverlay .beginWheel {
+    top: 25%;
+    left: 39%;
+    width: 300px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+#imgSelectorLoadOverlay {
+    display: none;
+    width: 300px;
+    height: 720px;
+}
+
+#imgSelectorLoadOverlay .beginWheel {
+    top: 33%;
+    left: 23%;
+    width: 180px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
