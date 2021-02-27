@@ -1,4 +1,3 @@
-require('../../dotenv').config();
 console.log(process.env.IMGUR_KEY);
 console.log(process.env.SCRAPPER_KEY);
 
