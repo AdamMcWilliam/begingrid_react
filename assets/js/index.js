@@ -1,5 +1,5 @@
-console.log(process.env.IMGUR_KEY);
-console.log(process.env.SCRAPPER_KEY);
+console.log(process.env.REACT_APP_IMGUR_KEY);
+console.log(process.env.REACT_APP_SCRAPPER_KEY);
 
 stage = new Konva.Stage({
     container: 'container',
