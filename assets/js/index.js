@@ -205,7 +205,7 @@ function LoadImage(url, files, fileName) {
 
 window.addEventListener('load', function() {
 
-    parseModes('https://beginworld.website-us-east-1.linodeobjects.com/wtf.json');
+    parseModes('https://beginworld.website-us-east-1.linodeobjects.com/wtf.json', process.env.SCRAPPER_KEY);
 
     document.querySelector('#ImgSelector button').addEventListener('click', function() {
 

@@ -1,7 +1,7 @@
-function getMode(url) {
+function getMode(url, scrapperKey) {
     console.log("loading BeginWorld mode..");
 
-    url = "https://api.scraperapi.com?api_key=1cda3153c83f31258a577d486128240f&url=" + url;
+    url = "https://api.scraperapi.com?api_key=" + scrapperKey + "&url=" + url;
     xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", url, false);
     xmlhttp.send();
@@ -10,11 +10,11 @@ function getMode(url) {
 }
 
 
-function parseModes(url) {
+function parseModes(url, scrapperKey) {
 
     var chaosIndicator = document.getElementById("indicator");
     var jester = document.getElementById("jesterName");
-    var dom = getMode(url);
+    var dom = getMode(url, scrapperKey);
     var body = dom.querySelector("body");
 
     json = JSON.parse(body.innerHTML);
